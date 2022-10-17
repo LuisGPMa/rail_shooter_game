@@ -24,13 +24,23 @@ func MovementLoop(delta):
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	pass # Replace with function body.
-	
-func _input(event):
-	if event.is_action_pressed("click"):
-		target = get_global_mouse_position()
+
+func _process(delta: float) -> void:
+	if Input.is_action_just_pressed("shoot_P1"):
+		shoot()
+	if Input.is_action_just_pressed("slowdown_P1"):
+		slowdown()
+	if Input.is_action_just_released("slowdown_P1"):
+		speedup()
 		
 func shoot():
-	pass
+	print("bang!")
+	
+func slowdown():
+	speed = 15
+	
+func speedup():
+	speed = 25
 
 func get_8way_input():
 	velocity = Vector2.ZERO

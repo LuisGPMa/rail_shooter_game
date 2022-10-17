@@ -16,6 +16,23 @@ onready var sprite := $Sprite
 
 #onready var box := preload("res://Items/Box.tscn")
 
+func _process(delta: float) -> void:
+	if Input.is_action_just_pressed("shoot_P2"):
+		shoot()
+	if Input.is_action_just_pressed("slowdown_P2"):
+		slowdown()
+	if Input.is_action_just_released("slowdown_P2"):
+		speedup()
+		
+func slowdown():
+	speed = 15
+	
+func speedup():
+	speed = 25
+		
+func shoot():
+	print("bang!")
+
 func MovementLoop(delta):
 	var prepos = path_follow.get_global_position()
 	path_follow.set_offset(path_follow.get_offset() + speed*delta)
@@ -24,13 +41,6 @@ func MovementLoop(delta):
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	pass # Replace with function body.
-	
-func _input(event):
-	if event.is_action_pressed("click"):
-		target = get_global_mouse_position()
-		
-func shoot():
-	pass
 
 func get_8way_input():
 	velocity = Vector2.ZERO
