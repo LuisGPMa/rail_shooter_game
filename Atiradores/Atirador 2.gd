@@ -1,12 +1,13 @@
 extends KinematicBody2D
 
-export (int) var speed = 25
+export (int) var speed = 5
 export (float) var rotation_speed = 1.5
 
 export (PackedScene) var box : PackedScene
 
 var velocity := Vector2.ZERO
 var rotation_dir := 0
+onready var raycast = $AnimatedSprite/RayCast2D	
 
 # Onready inicializa como se estivesse no callback _ready
 onready var path_follow = get_parent()
@@ -31,7 +32,10 @@ func speedup():
 	speed = 25
 		
 func shoot():
-	print("bang!")
+	print(str(raycast.get_collider()))
+	if raycast.is_colliding():
+		Global.pontosAti1 -= 10
+		print("Atirador 1 " + str(Global.pontosAti1))
 
 func MovementLoop(delta):
 	var prepos = path_follow.get_global_position()

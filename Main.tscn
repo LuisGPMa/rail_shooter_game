@@ -20,3 +20,8 @@ position = Vector2( 662, 373 )
 position = Vector2( 86, 409 )
 scale = Vector2( 15, 15 )
 z_index = 1
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2( 568, 156 )
+current = true
+zoom = Vector2( 2, 2 )

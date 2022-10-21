@@ -23,6 +23,11 @@ script = ExtResource( 2 )
 position = Vector2( 0, -2 )
 frames = SubResource( 1 )
 
+[node name="RayCast2D" type="RayCast2D" parent="Sprite"]
+position = Vector2( 40, 2 )
+enabled = true
+cast_to = Vector2( 1000, 0 )
+
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( -1, -0.5 )
 shape = SubResource( 2 )
