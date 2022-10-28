@@ -6,6 +6,7 @@
 [ext_resource path="res://Trilhos/Trilho 1.tscn" type="PackedScene" id=4]
 
 [node name="Main" type="Node2D"]
+position = Vector2( 458, 443 )
 script = ExtResource( 2 )
 
 [node name="Bg1" type="Sprite" parent="."]

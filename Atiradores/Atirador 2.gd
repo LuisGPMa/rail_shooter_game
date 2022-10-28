@@ -8,7 +8,8 @@ export (PackedScene) var box : PackedScene
 var velocity := Vector2.ZERO
 var rotation_dir := 0
 onready var raycast = $AnimatedSprite/RayCast2D	
-
+var shotAvailable := true
+var shotCooldownTimer
 # Onready inicializa como se estivesse no callback _ready
 onready var path_follow = get_parent()
 onready var target = position
@@ -18,8 +19,9 @@ onready var sprite := $Sprite
 #onready var box := preload("res://Items/Box.tscn")
 
 func _process(delta: float) -> void:
-	if Input.is_action_just_pressed("shoot_P2"):
+	if Input.is_action_just_pressed("shoot_P2") and shotAvailable:
 		shoot()
+		
 	if Input.is_action_just_pressed("slowdown_P2"):
 		slowdown()
 	if Input.is_action_just_released("slowdown_P2"):
@@ -36,6 +38,11 @@ func shoot():
 	if raycast.is_colliding():
 		Global.pontosAti1 -= 10
 		print("Atirador 1 " + str(Global.pontosAti1))
+	shotAvailable = false
+	shotCooldownTimer.start(1)
+	
+func _on_Timer_timeout():
+	shotAvailable = true
 
 func MovementLoop(delta):
 	var prepos = path_follow.get_global_position()
@@ -44,7 +51,8 @@ func MovementLoop(delta):
 	rotation_dir = (pos.angle_to_point(prepos) / 3.14)*180
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
+	shotCooldownTimer = $Timer
+	shotCooldownTimer.connect("timeout", self, "_on_Timer_timeout")
 
 func get_8way_input():
 	velocity = Vector2.ZERO

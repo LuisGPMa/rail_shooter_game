@@ -15,4 +15,4 @@ rotation = -2.53035
 
 [node name="Atirador 2" parent="Path2D/PathFollow2D2" instance=ExtResource( 1 )]
 position = Vector2( -0.464058, 0.325207 )
-rotation = 2.53035
+rotation = 3.40514
