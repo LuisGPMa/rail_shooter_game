@@ -1,6 +1,6 @@
 extends KinematicBody2D
 
-export var velocidade = 300
+export var velocidade = 500
 
 func _physics_process(delta):
 	move_and_collide(transform.x.normalized() * delta * velocidade)

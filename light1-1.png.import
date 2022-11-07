@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/icon_editor_handle_add.svg-7258971e5edcfe4396b7b9c27c0ba1cc.stex"
+path="res://.import/light1-1.png-a357bf5672cccb87f5a8460474f48d15.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://addons/rmsmartshape/assets/icon_editor_handle_add.svg"
-dest_files=[ "res://.import/icon_editor_handle_add.svg-7258971e5edcfe4396b7b9c27c0ba1cc.stex" ]
+source_file="res://light1-1.png"
+dest_files=[ "res://.import/light1-1.png-a357bf5672cccb87f5a8460474f48d15.stex" ]
 
 [params]
 
@@ -20,7 +20,7 @@ compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=false
+flags/filter=true
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2

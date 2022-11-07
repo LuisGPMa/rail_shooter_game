@@ -1,7 +1,7 @@
 extends KinematicBody2D
 
 const tiro = preload("res://Cenas/Tiro.tscn")
-var delay = 0.1
+var delay = 0.2
 var podeAtirar = true
 export (int) var speed = 10
 var rotation_dir := 0
