@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/carrinho2.png-4daafc1ab5812eb63b02354b61808433.stex"
+path="res://.import/laser_powerup.png-7172448281222ed64a3cfa12268b6600.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/carrinho2.png"
-dest_files=[ "res://.import/carrinho2.png-4daafc1ab5812eb63b02354b61808433.stex" ]
+source_file="res://Sprites/laser_powerup.png"
+dest_files=[ "res://.import/laser_powerup.png-7172448281222ed64a3cfa12268b6600.stex" ]
 
 [params]
 

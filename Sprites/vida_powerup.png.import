@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/carrinho2.png-4daafc1ab5812eb63b02354b61808433.stex"
+path="res://.import/vida_powerup.png-c472e9e1cf9a5e02e79b914b2f701dac.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/carrinho2.png"
-dest_files=[ "res://.import/carrinho2.png-4daafc1ab5812eb63b02354b61808433.stex" ]
+source_file="res://Sprites/vida_powerup.png"
+dest_files=[ "res://.import/vida_powerup.png-c472e9e1cf9a5e02e79b914b2f701dac.stex" ]
 
 [params]
 
