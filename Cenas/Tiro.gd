@@ -1,7 +1,7 @@
 extends KinematicBody2D
 
 export var velocidade = 500
-
+	
 func _physics_process(delta):
 	move_and_collide(transform.x.normalized() * delta * velocidade)
 	pass
@@ -13,7 +13,7 @@ func _on_Area2D_body_entered(body):
 			Global.pontosAti2 -= 10
 			queue_free()
 		
-		if body.name == "Atirador1":
+		if body.name == "Atirador1": #############3
 			Global.pontosAti1 -= 10
 			queue_free()
 		

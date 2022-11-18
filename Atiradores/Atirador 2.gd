@@ -6,6 +6,7 @@ var podeAtirar = true
 export (int) var speed = 10
 var rotation_dir := 0
 onready var path_follow = get_parent()
+onready var som = $AnimatedSprite/AudioStreamPlayer
 
 func MovementLoop(delta):
 	var prepos = path_follow.get_global_position()
@@ -31,7 +32,7 @@ func shoot():
 	t.position = $Pivot/Position2D.global_position
 	t.global_rotation = $Pivot.global_rotation
 	
-	print("tiro" + str(t.position))
+	som.play()
 	
 	delay()
 	
