@@ -1,4 +1,4 @@
-[gd_scene load_steps=306 format=2]
+[gd_scene load_steps=308 format=2]
 
 [ext_resource path="res://Trilhos/Trilho 3.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Main.gd" type="Script" id=2]
@@ -19,6 +19,8 @@
 [ext_resource path="res://Sprites/2855640-mod.png" type="Texture" id=17]
 [ext_resource path="res://BarraPontosAtir1.gd" type="Script" id=18]
 [ext_resource path="res://ProgressBar2.gd" type="Script" id=19]
+[ext_resource path="res://Powerups/Vida_Powerup.tscn" type="PackedScene" id=20]
+[ext_resource path="res://Powerups/Laser_powerup.tscn" type="PackedScene" id=21]
 
 [sub_resource type="DynamicFont" id=1]
 size = 50
@@ -2086,42 +2088,44 @@ margin_right = 40.0
 margin_bottom = 40.0
 
 [node name="Pontos Atirador 1" type="Label" parent="Control"]
-margin_left = 41.0
-margin_top = -258.0
-margin_right = 653.104
-margin_bottom = -58.0
+margin_left = -201.0
+margin_top = -292.0
+margin_right = 411.104
+margin_bottom = -92.0
 custom_fonts/font = SubResource( 1 )
-text = "Atirador 1"
+text = "Vida"
 script = ExtResource( 5 )
 
 [node name="Pontos Atirador 2" type="Label" parent="Control"]
-margin_left = 545.0
-margin_top = -258.0
-margin_right = 1239.0
-margin_bottom = -149.0
+margin_left = 1046.0
+margin_top = -294.0
+margin_right = 1740.0
+margin_bottom = -185.0
 custom_fonts/font = SubResource( 2 )
-text = "Atirador 2"
+text = "Vida"
 script = ExtResource( 7 )
 
 [node name="ProgressBar" type="ProgressBar" parent="Control"]
-margin_left = 58.0
-margin_top = -172.0
-margin_right = 289.0
-margin_bottom = -109.0
+margin_left = -190.0
+margin_top = -227.0
+margin_right = 41.0
+margin_bottom = -164.0
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 custom_colors/font_color_shadow = Color( 1, 1, 1, 1 )
 custom_styles/fg = SubResource( 3 )
 custom_styles/bg = SubResource( 4 )
+max_value = 50.0
 value = 50.0
 script = ExtResource( 18 )
 
 [node name="ProgressBar2" type="ProgressBar" parent="Control"]
-margin_left = 554.0
-margin_top = -172.0
-margin_right = 807.0
-margin_bottom = -109.0
+margin_left = 1060.0
+margin_top = -234.0
+margin_right = 1313.0
+margin_bottom = -171.0
 custom_styles/fg = SubResource( 5 )
 custom_styles/bg = SubResource( 6 )
+max_value = 50.0
 value = 50.0
 script = ExtResource( 19 )
 
@@ -2167,3 +2171,25 @@ collision_polygon_node_path = NodePath("")
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 anims/RESET = SubResource( 285 )
 "anims/Transição" = SubResource( 286 )
+
+[node name="vida_powerup" parent="." instance=ExtResource( 20 )]
+position = Vector2( 1292, 576 )
+scale = Vector2( 3, 3 )
+
+[node name="vida_powerup2" parent="." instance=ExtResource( 20 )]
+position = Vector2( -176, 571 )
+scale = Vector2( 3, 3 )
+
+[node name="laser_powerup" parent="." instance=ExtResource( 21 )]
+position = Vector2( -163, 389 )
+rotation = 0.656244
+scale = Vector2( 3, 3 )
+
+[node name="laser_powerup2" parent="." instance=ExtResource( 21 )]
+position = Vector2( 1282, 370 )
+rotation = -0.764454
+scale = Vector2( 3, 3 )
+
+[node name="vida_powerup3" parent="." instance=ExtResource( 20 )]
+position = Vector2( 569, 574 )
+scale = Vector2( 3, 3 )

@@ -1,7 +1,7 @@
 extends Node
 
-var pontosAti1 = 10
-var pontosAti2 = 10
+var pontosAti1 = 50
+var pontosAti2 = 50
 var vencedor = ""
 var perdedor = ""
 var fase = 0
@@ -12,8 +12,8 @@ func _ready():
 	pass
 
 func restaurar():
-	pontosAti1 = 10
-	pontosAti2 = 10
+	pontosAti1 = 50
+	pontosAti2 = 50
 
 func trocarDeCena():
 	if Global.pontosAti1 == 0 or Global.pontosAti2 == 0:
