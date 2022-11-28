@@ -4,9 +4,6 @@ export var velocidade = 500
 	
 var atirador: int
 
-func _init(atirador):
-	self.atirador = atirador
-
 func _physics_process(delta):
 	move_and_collide(transform.x.normalized() * delta * velocidade)
 	pass
@@ -26,9 +23,9 @@ func _on_Area2D_body_entered(body):
 			print("Tiro Recebido")
 			queue_free()
 			
-		if body.name == "vida_powerup":
+		if "vida" in body.name:
 			print("acertou_baú_vida")
-			print(get_parent().name)
+			Global.curaJogador(atirador)
 			queue_free()
 		
 		

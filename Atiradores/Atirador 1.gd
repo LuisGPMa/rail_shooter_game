@@ -29,6 +29,7 @@ func shoot():
 	var t = tiro.instance()
 	
 	get_tree().get_root().add_child(t)
+	t.atirador = 1
 	t.position = $Pivot/Position2D.global_position
 	t.global_rotation = $Pivot.global_rotation
 	
