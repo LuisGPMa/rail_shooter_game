@@ -14,6 +14,7 @@ func _input(event: InputEvent) -> void:
 
 func _process(delta):
 	if Global.pontosAti1 == 0 or Global.pontosAti2 == 0:
+		Global.desabilitarMira()
 		animation.play("Transição")
 		yield(animation, "animation_finished")
 		Global.trocarDeCena()

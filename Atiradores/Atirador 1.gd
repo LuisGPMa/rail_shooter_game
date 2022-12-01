@@ -6,6 +6,7 @@ var podeAtirar = true
 export (int) var speed = 10
 var rotation_dir := 0
 onready var path_follow = get_parent()
+onready var imagemMira = $Mira
 onready var som = $Sprite/AudioStreamPlayer
 
 func MovementLoop(delta):
@@ -24,12 +25,19 @@ func _process(delta: float) -> void:
 		slowdown()
 	if Input.is_action_just_released("speedup_P1"):
 		speedup()
+	if Global.miraAti1:
+		imagemMira.visible = true
+	else: 
+		imagemMira.visible = false
+	delay = Global.delayAtir1
+	print("delay atirador 1 " + str(Global.delayAtir1))
 		
 func shoot():
 	var t = tiro.instance()
 	
 	get_tree().get_root().add_child(t)
 	t.atirador = 1
+	t.nome = "atr1"
 	t.position = $Pivot/Position2D.global_position
 	t.global_rotation = $Pivot.global_rotation
 	

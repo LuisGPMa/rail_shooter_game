@@ -1,12 +1,11 @@
-[gd_scene load_steps=308 format=2]
+[gd_scene load_steps=298 format=2]
 
 [ext_resource path="res://Trilhos/Trilho 3.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Main.gd" type="Script" id=2]
 [ext_resource path="res://bg1.png" type="Texture" id=3]
 [ext_resource path="res://Trilhos/Trilho 1.tscn" type="PackedScene" id=4]
-[ext_resource path="res://Pontos Atirador 1.gd" type="Script" id=5]
-[ext_resource path="res://Xolonium-Regular.ttf" type="DynamicFontData" id=6]
-[ext_resource path="res://Pontos Atirador 2.gd" type="Script" id=7]
+[ext_resource path="res://Hud.tscn" type="PackedScene" id=5]
+[ext_resource path="res://BauLazer.tscn" type="PackedScene" id=6]
 [ext_resource path="res://addons/rmsmartshape/materials/shape_material.gd" type="Script" id=8]
 [ext_resource path="res://addons/rmsmartshape/shapes/point_array.gd" type="Script" id=9]
 [ext_resource path="res://addons/rmsmartshape/materials/edge_material_metadata.gd" type="Script" id=10]
@@ -17,41 +16,7 @@
 [ext_resource path="res://addons/rmsmartshape/shapes/shape_closed.gd" type="Script" id=15]
 [ext_resource path="res://Sprites/3773876.png" type="Texture" id=16]
 [ext_resource path="res://Sprites/2855640-mod.png" type="Texture" id=17]
-[ext_resource path="res://BarraPontosAtir1.gd" type="Script" id=18]
-[ext_resource path="res://ProgressBar2.gd" type="Script" id=19]
 [ext_resource path="res://Powerups/Vida_Powerup.tscn" type="PackedScene" id=20]
-[ext_resource path="res://Powerups/Laser_powerup.tscn" type="PackedScene" id=21]
-
-[sub_resource type="DynamicFont" id=1]
-size = 50
-outline_color = Color( 0, 0, 0, 1 )
-font_data = ExtResource( 6 )
-
-[sub_resource type="DynamicFont" id=2]
-size = 50
-font_data = ExtResource( 6 )
-
-[sub_resource type="StyleBoxFlat" id=3]
-bg_color = Color( 0.0901961, 0.635294, 0.0901961, 1 )
-border_width_left = 4
-border_width_top = 3
-border_width_right = 4
-border_width_bottom = 3
-border_color = Color( 0.352941, 0.317647, 0.317647, 1 )
-
-[sub_resource type="StyleBoxFlat" id=4]
-bg_color = Color( 0.352941, 0.317647, 0.317647, 1 )
-
-[sub_resource type="StyleBoxFlat" id=5]
-bg_color = Color( 0.0901961, 0.635294, 0.0901961, 1 )
-border_width_left = 4
-border_width_top = 3
-border_width_right = 4
-border_width_bottom = 3
-border_color = Color( 0.352941, 0.317647, 0.317647, 1 )
-
-[sub_resource type="StyleBoxFlat" id=6]
-bg_color = Color( 0.352941, 0.317647, 0.317647, 1 )
 
 [sub_resource type="Resource" id=287]
 script = ExtResource( 14 )
@@ -2083,51 +2048,7 @@ position = Vector2( 558, 159 )
 current = true
 zoom = Vector2( 1.5, 1.5 )
 
-[node name="Control" type="Control" parent="."]
-margin_right = 40.0
-margin_bottom = 40.0
-
-[node name="Pontos Atirador 1" type="Label" parent="Control"]
-margin_left = -201.0
-margin_top = -292.0
-margin_right = 411.104
-margin_bottom = -92.0
-custom_fonts/font = SubResource( 1 )
-text = "Vida"
-script = ExtResource( 5 )
-
-[node name="Pontos Atirador 2" type="Label" parent="Control"]
-margin_left = 1046.0
-margin_top = -294.0
-margin_right = 1740.0
-margin_bottom = -185.0
-custom_fonts/font = SubResource( 2 )
-text = "Vida"
-script = ExtResource( 7 )
-
-[node name="ProgressBar" type="ProgressBar" parent="Control"]
-margin_left = -190.0
-margin_top = -227.0
-margin_right = 41.0
-margin_bottom = -164.0
-custom_colors/font_color = Color( 1, 1, 1, 1 )
-custom_colors/font_color_shadow = Color( 1, 1, 1, 1 )
-custom_styles/fg = SubResource( 3 )
-custom_styles/bg = SubResource( 4 )
-max_value = 50.0
-value = 50.0
-script = ExtResource( 18 )
-
-[node name="ProgressBar2" type="ProgressBar" parent="Control"]
-margin_left = 1060.0
-margin_top = -234.0
-margin_right = 1313.0
-margin_bottom = -171.0
-custom_styles/fg = SubResource( 5 )
-custom_styles/bg = SubResource( 6 )
-max_value = 50.0
-value = 50.0
-script = ExtResource( 19 )
+[node name="Control" parent="." instance=ExtResource( 5 )]
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 position = Vector2( -305, 33 )
@@ -2180,16 +2101,16 @@ scale = Vector2( 3, 3 )
 position = Vector2( -176, 571 )
 scale = Vector2( 3, 3 )
 
-[node name="laser_powerup" parent="." instance=ExtResource( 21 )]
-position = Vector2( -163, 389 )
-rotation = 0.656244
-scale = Vector2( 3, 3 )
-
-[node name="laser_powerup2" parent="." instance=ExtResource( 21 )]
-position = Vector2( 1282, 370 )
-rotation = -0.764454
-scale = Vector2( 3, 3 )
-
 [node name="vida_powerup3" parent="." instance=ExtResource( 20 )]
 position = Vector2( 569, 574 )
 scale = Vector2( 3, 3 )
+
+[node name="Bau" parent="." instance=ExtResource( 6 )]
+position = Vector2( -163, 389 )
+rotation = 0.656244
+scale = Vector2( 0.3, 0.3 )
+
+[node name="Bau2" parent="." instance=ExtResource( 6 )]
+position = Vector2( 1281, 371 )
+rotation = -0.764454
+scale = Vector2( 0.3, 0.3 )

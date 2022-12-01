@@ -6,6 +6,7 @@ onready var animation = $AnimationPlayer
 
 func _ready() -> void:
 	Global.fase = 2
+	print(Global.fase)
 	
 func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("ui_right"):
@@ -13,6 +14,7 @@ func _input(event: InputEvent) -> void:
 
 func _process(delta):
 	if Global.pontosAti1 == 0 or Global.pontosAti2 == 0:
+		Global.desabilitarMira()
 		animation.play("Transição")
 		yield(animation, "animation_finished")
 		Global.trocarDeCena()

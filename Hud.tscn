@@ -1,0 +1,84 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://Xolonium-Regular.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://Pontos Atirador 1.gd" type="Script" id=2]
+[ext_resource path="res://Pontos Atirador 2.gd" type="Script" id=3]
+[ext_resource path="res://BarraPontosAtir1.gd" type="Script" id=4]
+[ext_resource path="res://ProgressBar2.gd" type="Script" id=5]
+
+[sub_resource type="DynamicFont" id=1]
+size = 50
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 50
+font_data = ExtResource( 1 )
+
+[sub_resource type="StyleBoxFlat" id=3]
+bg_color = Color( 0.0901961, 0.635294, 0.0901961, 1 )
+border_width_left = 4
+border_width_top = 3
+border_width_right = 4
+border_width_bottom = 3
+border_color = Color( 0.352941, 0.317647, 0.317647, 1 )
+
+[sub_resource type="StyleBoxFlat" id=4]
+bg_color = Color( 0.352941, 0.317647, 0.317647, 1 )
+
+[sub_resource type="StyleBoxFlat" id=5]
+bg_color = Color( 0.0901961, 0.635294, 0.0901961, 1 )
+border_width_left = 4
+border_width_top = 3
+border_width_right = 4
+border_width_bottom = 3
+border_color = Color( 0.352941, 0.317647, 0.317647, 1 )
+
+[sub_resource type="StyleBoxFlat" id=6]
+bg_color = Color( 0.352941, 0.317647, 0.317647, 1 )
+
+[node name="Control" type="Control"]
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="Pontos Atirador 1" type="Label" parent="."]
+margin_left = -201.0
+margin_top = -292.0
+margin_right = 411.104
+margin_bottom = -92.0
+custom_fonts/font = SubResource( 1 )
+text = "Vida"
+script = ExtResource( 2 )
+
+[node name="Pontos Atirador 2" type="Label" parent="."]
+margin_left = 1046.0
+margin_top = -294.0
+margin_right = 1740.0
+margin_bottom = -185.0
+custom_fonts/font = SubResource( 2 )
+text = "Vida"
+script = ExtResource( 3 )
+
+[node name="ProgressBar" type="ProgressBar" parent="."]
+margin_left = -190.0
+margin_top = -227.0
+margin_right = 41.0
+margin_bottom = -164.0
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_shadow = Color( 1, 1, 1, 1 )
+custom_styles/fg = SubResource( 3 )
+custom_styles/bg = SubResource( 4 )
+max_value = 50.0
+value = 50.0
+script = ExtResource( 4 )
+
+[node name="ProgressBar2" type="ProgressBar" parent="."]
+margin_left = 1060.0
+margin_top = -234.0
+margin_right = 1313.0
+margin_bottom = -171.0
+custom_styles/fg = SubResource( 5 )
+custom_styles/bg = SubResource( 6 )
+max_value = 50.0
+value = 50.0
+script = ExtResource( 5 )

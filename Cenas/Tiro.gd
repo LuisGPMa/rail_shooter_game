@@ -3,6 +3,7 @@ extends KinematicBody2D
 export var velocidade = 500
 	
 var atirador: int
+var nome = ""	
 
 func _physics_process(delta):
 	move_and_collide(transform.x.normalized() * delta * velocidade)
@@ -17,7 +18,7 @@ func _on_Area2D_body_entered(body):
 			Global.pontosAti2 -= 10
 			queue_free()
 		
-		if body.name == "Atirador1": #############3
+		if body.name == "Atirador1": 
 			Global.pontosAti1 -= 10
 			print(body.name)
 			print("Tiro Recebido")
@@ -26,6 +27,7 @@ func _on_Area2D_body_entered(body):
 		if "vida" in body.name:
 			print("acertou_baú_vida")
 			Global.curaJogador(atirador)
+			body.queue_free()
 			queue_free()
 		
 		

@@ -9,6 +9,11 @@ var fase = 0
 var scoreAtirador1 = 0
 var scoreAtirador2 = 0
 var qtdCura = 20
+var miraAti1 = false
+var miraAti2 = false
+var delayAtir1 = 0.2
+var delayAtir2 = 0.2
+
 
 func _ready():
 	pass
@@ -46,3 +51,8 @@ func trocarDeCena():
 			get_tree().change_scene("res://GameOver.tscn")
 		elif fase < 3:
 			get_tree().change_scene("res://Control.tscn")
+			
+			
+func desabilitarMira():
+	miraAti1 = false
+	miraAti2 = false
