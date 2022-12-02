@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/download (1).jpg-b923c03c0ab86a2ebf58bb428c900297.stex"
+path="res://.import/OdbVKT.jpg-92199cc7b469f48396695d4c8bcfb8a8.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/download (1).jpg"
-dest_files=[ "res://.import/download (1).jpg-b923c03c0ab86a2ebf58bb428c900297.stex" ]
+source_file="res://OdbVKT.jpg"
+dest_files=[ "res://.import/OdbVKT.jpg-92199cc7b469f48396695d4c8bcfb8a8.stex" ]
 
 [params]
 

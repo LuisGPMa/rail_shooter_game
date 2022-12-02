@@ -30,7 +30,6 @@ func _process(delta: float) -> void:
 	else:
 		mira.visible = false
 	delay = Global.delayAtir2
-	print("delay atirador 2 " + str(Global.delayAtir2))
 
 func shoot():
 	var t = tiro.instance()

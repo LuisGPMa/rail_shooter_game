@@ -3,7 +3,7 @@ extends Area2D
 onready var sprite = $Sprite
 onready var collision = $CollisionShape2D2
 onready var timer = $Timer
-var segundos = 5
+var segundos = 10
 
 func _on_Bau_body_entered(body):
 	print("tiro no bau")

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/bg1.jpg-dcb223125a6f36a15936a8a0fc6e7b8d.stex"
+path="res://.import/minecart.png-56dff284a274413a7e8d5f70431d2033.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://bg1.jpg"
-dest_files=[ "res://.import/bg1.jpg-dcb223125a6f36a15936a8a0fc6e7b8d.stex" ]
+source_file="res://Sprites/minecart.png"
+dest_files=[ "res://.import/minecart.png-56dff284a274413a7e8d5f70431d2033.stex" ]
 
 [params]
 

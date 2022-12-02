@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/bg2.jpg-6eb4a148f0587090ef031af80bb4d3f6.stex"
+path="res://.import/cave2.jpg-12dd8d6d85a3f5e571ed6c738afde91a.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://bg2.jpg"
-dest_files=[ "res://.import/bg2.jpg-6eb4a148f0587090ef031af80bb4d3f6.stex" ]
+source_file="res://Sprites/cave2.jpg"
+dest_files=[ "res://.import/cave2.jpg-12dd8d6d85a3f5e571ed6c738afde91a.stex" ]
 
 [params]
 

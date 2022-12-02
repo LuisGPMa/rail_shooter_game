@@ -51,10 +51,10 @@ text = "Vida"
 script = ExtResource( 2 )
 
 [node name="Pontos Atirador 2" type="Label" parent="."]
-margin_left = 1046.0
-margin_top = -294.0
-margin_right = 1740.0
-margin_bottom = -185.0
+margin_left = 825.0
+margin_top = -281.0
+margin_right = 1519.0
+margin_bottom = -172.0
 custom_fonts/font = SubResource( 2 )
 text = "Vida"
 script = ExtResource( 3 )
@@ -73,10 +73,10 @@ value = 50.0
 script = ExtResource( 4 )
 
 [node name="ProgressBar2" type="ProgressBar" parent="."]
-margin_left = 1060.0
-margin_top = -234.0
-margin_right = 1313.0
-margin_bottom = -171.0
+margin_left = 841.0
+margin_top = -220.0
+margin_right = 1094.0
+margin_bottom = -157.0
 custom_styles/fg = SubResource( 5 )
 custom_styles/bg = SubResource( 6 )
 max_value = 50.0
