@@ -68,8 +68,8 @@ custom_colors/font_color = Color( 1, 1, 1, 1 )
 custom_colors/font_color_shadow = Color( 1, 1, 1, 1 )
 custom_styles/fg = SubResource( 3 )
 custom_styles/bg = SubResource( 4 )
-max_value = 50.0
-value = 50.0
+max_value = 30.0
+value = 20.0
 script = ExtResource( 4 )
 
 [node name="ProgressBar2" type="ProgressBar" parent="."]
@@ -79,6 +79,6 @@ margin_right = 1094.0
 margin_bottom = -157.0
 custom_styles/fg = SubResource( 5 )
 custom_styles/bg = SubResource( 6 )
-max_value = 50.0
-value = 50.0
+max_value = 30.0
+value = 20.0
 script = ExtResource( 5 )

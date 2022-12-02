@@ -1,8 +1,8 @@
 extends Node
 
-const VIDA_MAX = 50
-var pontosAti1 = 50
-var pontosAti2 = 50
+const VIDA_MAX = 30
+var pontosAti1 = 30
+var pontosAti2 = 30
 var vencedor = ""
 var perdedor = ""
 var fase = 0

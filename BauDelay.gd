@@ -4,7 +4,7 @@ onready var sprite = $Sprite
 onready var collision = $CollisionShape2D2
 onready var timer = $Timer
 var segundos = 10
-const Velocidade = 0.0001
+const Velocidade = 0.002
 
 func _on_Bau_body_entered(body):
 	print("tiro no bau")

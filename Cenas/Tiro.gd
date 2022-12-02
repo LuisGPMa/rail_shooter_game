@@ -12,16 +12,16 @@ func _physics_process(delta):
 func _on_Area2D_body_entered(body):
 	if body is KinematicBody2D:
 		
-		if body.name == "Atirador 2":
+		if body.name == "Atirador 2" and Global.pontosAti2 > 0:
 			print(body.name)
-			print("Tiro Recebido")
+			print("Tiro Recebido atirador 2")
 			Global.pontosAti2 -= 10
 			queue_free()
 		
-		if body.name == "Atirador1": 
+		if body.name == "Atirador 1" and Global.pontosAti1 > 0: 
 			Global.pontosAti1 -= 10
 			print(body.name)
-			print("Tiro Recebido")
+			print("Tiro Recebido atirador 1")
 			queue_free()
 			
 		if "vida" in body.name:
